@@ -1,7 +1,7 @@
 # -DOSR Repository
 #  DOSR - DB2 Objects Space Reporter Tool for z/OS Ver. 1.0.0
 
-Build an allocation report of DB2 Objects to control the growth of all DB2 Objects and signal critical situation to have a
+Build an allocation report of DB2 Objects to control the growth of all DB2 Objects and signal critical situations to have a
 proactive approach avoiding disruption in a Customer service.
 
 Obtain a report for each DB2 in a z/OS partition that you can see in "DOSR_Report.txt" file.
