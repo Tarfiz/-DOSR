@@ -1,0 +1,71 @@
+DOSR - DB2 Objects Space Reporter Tool Version 1.0.0 for z/OS Readme
+
+(c) 2016. All Rights Reserved.
+
+          I N S T A L L A T I O N   N O T E S
+
+CONTENTS
+--------
+
+1.0  ABOUT THIS README FILE
+1.1  Who should read this readme file
+
+2.0  INSTALLING THE LIBRARY PACKAGE
+
+3.0  REQUIREMENTS
+
+
+1.0  ABOUT THIS README FILE
+---------------------------
+
+This file contains the latest information about installing the
+DOSR - DB2 Objects Space Reporter Tool Version 1.0.0 for z/OS
+
+
+1.1  Who should read this readme file
+
+Users who want to install the DDTA - Deadlock/Timeout Analysis Tools for DB2 
+for z/OS.
+
+
+2.0  INSTALLING THE LIBRARY PACKAGE
+---------------------------------------------
+
+DOSR is a Library package shipped in XMIT Library file format.
+
+The following steps are required to install IFIT Library:
+
+  (1.) Download and unzip DDTA.ZIP in a temporary directory on
+       a PC. Unpack and obtain the following files in XMIT Format:
+
+        *  EXEC.xmi
+        *  JCL.xmi
+        *  LOAD.xmi
+        *  This README file with the latest installation information
+
+  (2.) Transfer in z/OS server all xmi files in bynary mode in a 
+       preallocated sequential (RECFM=FB LRECL=80 BLKSIZE=3120) using 
+	     FTP or other trasfer program (IND$FILE, etc.)
+
+  (3.) In z/OS TSO session restore PDS/PDSE Library using command:
+  
+        * RECEIVE INDA(-- each one XMI Files --)
+        
+        using your own library prefix to restore each one 
+     
+  (4.) Customize JBDOSRPT in your own library prefix JCL restored library.
+  
+  (5.) Submit JBDOSRPT. Control output files produced "LISTACRI" and "SUMMARY".
+       Send files using an email if you want and enjoy for application.
+
+
+3.0  Final Notes
+-----------------
+Job JBDOSRPT can be scheduled dayly, weekly or monthly for each DB2 System 
+you need control.
+
+Job JBDOSRPT shows how send an email using XMIITP free client for z/OS. 
+Customize this steps if you want use it. 
+
+In each case a user may need security authorizaton to use the application.
+  
